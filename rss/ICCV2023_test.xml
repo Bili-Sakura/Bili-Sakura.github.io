@@ -1,4 +1,7 @@
-
+<?xml version="1.0" encoding="utf8"?>
+<rss version="2.0">
+<channel>
+    <title>ICCV 2023</title>
         <paper>
             <title>Towards Attack-tolerant Federated Learning via Critical Parameter Analysis</title>
             <abstract>Federated learning is used to train a shared model in a decentralized way without clients sharing private data with each other. Federated learning systems are susceptible to poisoning attacks when malicious clients send false updates to the central server. Existing defense strategies are ineffective under non-IID data settings. This paper proposes a new defense strategy, FedCPA (Federated learning with Critical Parameter Analysis). Our attack-tolerant aggregation method is based on the observation that benign local models have similar sets of top-k and bottom-k critical parameters, whereas poisoned local models do not. Experiments with different attack scenarios on multiple datasets demonstrate that our model outperforms existing defense strategies in defending against poisoning attacks.</abstract>
@@ -5464,4 +5467,5 @@
                 <author>Yixuan Wu</author><author>Zhao Zhang</author><author>Chi Xie</author><author>Feng Zhu</author><author>Rui Zhao</author>
             </authors>
         </paper>
-        
+    </channel>
+</rss>    
