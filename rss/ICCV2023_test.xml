@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-    <title>ICCV 2023 Papers</title>
+    <title><![CDATA[ICCV 2023 Papers - Papers]]></title>
+    <link><![CDATA[http://openaccess.thecvf.com]]></link>
 <item>
     <title><![CDATA[Towards Attack-tolerant Federated Learning via Critical Parameter Analysis]]></title>
     <link><![CDATA[http://openaccess.thecvf.com//content/ICCV2023/papers/Han_Towards_Attack-tolerant_Federated_Learning_via_Critical_Parameter_Analysis_ICCV_2023_paper.pdf]]></link>
