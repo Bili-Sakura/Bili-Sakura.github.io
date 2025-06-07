@@ -31,7 +31,7 @@ if not items:
     sys.exit(0)
 
 # 3) 首次运行：初始化 videos.json 为最新 5 条，并写 last_bvid
-if last_bvid is None:
+if last_bvid is None or not os.path.exists(JSON_FILE):
     initial = items[:MAX_VIDEOS]
     initial_entries = [
         {
