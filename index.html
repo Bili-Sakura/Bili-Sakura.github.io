@@ -137,6 +137,62 @@
             </tr>
         </tbody>
     </table>
+    <section style="width:100%; max-width:800px; margin:32px auto;">
+        <h2>Bilibili</h2>
+        <div style="width:100%; display:flex; flex-direction:column; align-items:center; gap:24px;">
+            <a href="https://space.bilibili.com/3546681717033402" target="_blank" style="width:100%;">
+                <img src="assets/sakura.png" alt="Bilibili Profile"
+                    style="width:100%; max-width:400px; display:block; margin:0 auto;">
+            </a>
+            <div style="width:100%; text-align:center;">
+                <a href="https://space.bilibili.com/3546681717033402" target="_blank">
+                    <img src="https://img.shields.io/badge/Bilibili-Home_Page-00A1D6?logo=bilibili&logoColor=white"
+                        alt="Bilibili Home Page" style="margin-bottom:16px;">
+                </a>
+                <img src="assets/bilibili_mainpage.png" alt="Bilibili Main Page" style="width:100%; margin-top:16px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增：Latest 5 Videos -->
+    <section id="latest-videos" style="width:100%; max-width:800px; margin:32px auto;">
+        <h2>Latest 5 Bilibili Videos 最新5条视频</h2>
+        <div id="video-list">Loading…加载中…</div>
+    </section>
+
+    <script>
+        fetch('videos.json')
+            .then(r => {
+                if (!r.ok) throw new Error(r.statusText);
+                return r.json();
+            })
+            .then(videos => {
+                const container = document.getElementById('video-list');
+                container.innerHTML = '';
+                if (!videos.length) {
+                    container.textContent = 'No videos yet';
+                    return;
+                }
+                videos.forEach(v => {
+                    const det = document.createElement('details');
+                    const sum = document.createElement('summary');
+                    sum.textContent = v.title;
+                    det.appendChild(sum);
+                    const p = document.createElement('p');
+                    const a = document.createElement('a');
+                    a.href = v.url;
+                    a.textContent = '▶ Watch on Bilibili';
+                    p.appendChild(a);
+                    det.appendChild(p);
+                    container.appendChild(det);
+                });
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('video-list')
+                    .textContent = 'Failed to load videos 无法加载视频';
+            });
+    </script>
     <div style="width:100%; text-align:center; margin-top:32px;">
         <h3 style="color:#000;">Website Visitors Map</h3>
 
