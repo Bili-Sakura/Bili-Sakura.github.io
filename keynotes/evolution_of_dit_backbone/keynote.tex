@@ -1,0 +1,81 @@
+\documentclass[aspectratio=169]{beamer}
+% \pdfpagewidth=1920bp
+% \pdfpageheight=1080bp
+
+% No navigation or headline
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{bibliography item}{}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\setlist{nosep} % Compact lists
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{{assets/}}
+
+% --- Biblatex setup ---
+\usepackage[
+  backend=biber,
+  style=keynote,      % <-- Your custom .bbx/.cbx style must be in TEXINPUTS or project folder
+  citestyle=keynote,
+  maxbibnames=1,
+  uniquename=false,
+  sorting=none
+]{biblatex}
+\addbibresource{references.bib}
+
+% Reference formatting
+\renewcommand*{\bibfont}{\fontsize{5}{6}\selectfont}
+\newcommand{\bottomleftrefs}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south west, xshift=1pt, yshift=1pt] at (current page.south west) {%
+      \parbox{0.7\linewidth}{
+        \setlength{\bibitemsep}{0pt plus 0.3ex}
+        \printbibliography[heading=none]
+      }
+    };
+  \end{tikzpicture}%
+}
+
+% Custom footline
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \begin{minipage}[b]{0.70\paperwidth}
+    \vspace{0.2em}
+    {\fontsize{8}{10}\selectfont \textsf{\ifdefined\slidebib \slidebib \fi}}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[b]{0.28\paperwidth}
+    \vspace{0.2em}
+    \raggedleft
+    {\fontsize{9}{11}\selectfont \textrm{\textcopyright~\the\year~\insertauthor}}
+  \end{minipage}%
+}
+
+\newcommand{\slidebib}{}
+
+% Metadata (replace with your information)
+\title[]{Diffusion Model Track}
+\subtitle{Latest Backbone in Image Synthesis}
+\author[author]{Sakura}
+% \institute[institute]{institute}
+\date{2025/06/16\\\small\href{mailto:bili_sakura@zju.edu.cn}{bili\_sakura@zju.edu.cn}}
+
+\begin{document}
+
+\begin{frame}
+  \begin{minipage}{0.68\linewidth}
+    \titlepage
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{0.30\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{profile_new.jpeg}
+  \end{minipage}
+\end{frame}
+
+% Place your slides here:
+\input{slides}
+
+\end{document}
