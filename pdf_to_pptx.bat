@@ -1,4 +1,4 @@
 python pdf_to_pptx.py ^
-  keynotes/keynote.pdf ^
-  -o keynotes/keynote.pptx ^
+  keynotes/mid_pre/main.pdf ^
+  -o keynotes/mid_pre/27_czy.pptx ^
   --dpi 300
