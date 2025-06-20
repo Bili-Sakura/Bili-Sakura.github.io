@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper]{article}
+
+% Use fontspec for font selection (requires LuaLaTeX or XeLaTeX)
+\usepackage{fontspec}
+
+\usepackage{xeCJK} % For Chinese support with XeLaTeX
+
+% Set main and other fonts for better Chinese support
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+
+% Set Chinese fonts (adjust names as needed for your system)
+\setCJKmainfont{SimSun} % 宋体
+% \setCJKsansfont{SimHei} % 黑体
+% \setCJKmonofont{FangSong} % 仿宋
+
+
+% Page geometry
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+
+% Bibliography (biblatex with biber backend)
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{references.bib}
+
+% Math and graphics
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Hyperlinks
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Title information
+\title{中期进展报告 - 基于扩散模型的高效灾害遥感图像文本控制生成和应用}
+\author{陈振源}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  遥感图像对灾害应急响应、调度、管理和决策具有重大作用。而灾害发生具有随机性和稀有性，同时，不同地区面临各种灾害的实际情况差异大，在它地的实践经验难以有效的迁移。针对高分辨率时序遥感图像数据集稀少且时空分布不均的问题，本研究创新性的提出一种遥感图像合成方法，使用生成式模型（扩散模型）进行灾害遥感图像基于文本和灾前影像的可控生成，以弥补世界范围内灾害影像数据缺少的问题。
+\end{abstract}
+
+\section{背景}
+遥感图像在灾害应急响应、调度、管理和决策中发挥着至关重要的作用。通过对灾害发生区域的遥感监测，可以为应急部门提供及时、准确的信息支持，提升灾害响应的效率和科学性。然而，灾害事件具有高度的随机性和稀有性，这使得相关遥感数据的获取变得十分困难。许多灾害发生时无法及时获取高质量的遥感影像，导致数据积累缓慢，难以满足研究和实际应用的需求。此外，不同地区面临的灾害类型和实际情况存在较大差异，导致某一地区的经验和数据难以直接迁移和应用到其他地区。这种区域差异性进一步加剧了数据利用的局限性。目前，高分辨率时序遥感图像数据集不仅数量稀少，而且在时空分布上极为不均衡。部分地区数据丰富，而大多数受灾频发区域却缺乏足够的遥感影像资料。因此，亟需弥补全球范围内灾害遥感影像数据的缺口，推动相关数据的生成与共享，以支持灾害管理和科学研究的深入发展。
+
+传统的遥感图像分析方法在灾害场景下往往难以满足需求。无论是人工还是基于模型的方法，都难以应对灾害的多样性和复杂性；文本引导的编辑能够实现自适应、用户驱动的图像修改，但现有方法大多针对自然场景设计，难以生成真实且语义一致的遥感影像。为此，本工作聚焦于利用高分辨率、双时相RSCC卫星数据，实现灾害场景下的遥感图像文本引导编辑。我们的目标是通过用户指令实现灵活、精准的图像编辑，支持场景推演、快速制图、灾害损失评估和变化检测等灾害管理任务。然而，在遥感领域实现高质量、可控的图像编辑面临技术难题，主要包括领域泛化能力不足以及现有框架的高计算资源需求。当前主流框架在灾害任务中缺乏真实感和语义对齐能力，传统架构计算开销大，难以灵活部署于实际场景。针对上述挑战，我们提出了一种新颖的视觉模型及适应策略。主要贡献包括：面向灾害场景和文本指令的扩散Transformer架构，实现任务引导的遥感图像编辑（该架构专为灾害场景和文本化用户指令定制）；高效的模型微调策略，支持大规模适应（显著减少新任务所需的可训练参数，提高适应效率）；构建了全面的基准和新的评测指标，专用于文本引导的遥感图像编辑任务（填补了该领域的评测空白）；并且在高分辨率、双时相RSCC灾害影像上，相较现有方法取得了实证性提升（在极具挑战性的场景下展现出显著性能提升）。
+
+
+\section{相关工作}
+
+\subsection{遥感领域的文本到图像生成}
+
+近年来，遥感领域的文本到图像生成方法主要基于扩散模型，通常通过对预训练模型进行微调来实现。在数据有限的场景下，已有研究探索了高效的微调策略~\parencite{ouMethodEfficientSynthesizing2023}。CRS-Diff~\parencite{tangCRSDiffControllableRemote2024} 通过引入 ControlNet~\parencite{controlnet2023} 实现了多模态控制，DiffusionSat~\parencite{khannaDiffusionSatGenerativeFoundation2023} 则进一步提出了 3DControlNet 统一框架，支持时序生成、超分辨率和修复等多种下游任务。Text2Earth~\parencite{liuText2EarthUnlockingTextdriven2025a} 以文本到图像生成为主，同时支持图像编辑和修复等辅助任务。然而，这些方法大多依赖于容量较小的图像主干网络——通常为约 8 亿参数的预训练 UNet（如 Stable Diffusion），与新兴的大型扩散 Transformer(Diffusion Transformer, DiT) 模型相比，其表达能力受到限制。此外，这些方法的文本编码器通常沿用 Stable Diffusion 的 CLIP 变体，对于复杂任务或指令的深层语义理解能力有限。
+
+\subsection{基于扩散模型的图像编辑}
+
+图像编辑是计算机视觉中的基础任务，旨在根据用户意图对给定图像进行修改，同时保持图像的真实感和语义一致性。早期的指令引导图像编辑方法主要依赖于基于 UNet 的扩散模型。值得注意的是，InstructPix2Pix~\parencite{instructpix2pix2023} 首次提出了基于用户指令的编辑新范式，MagicBrush~\parencite{magicbrush2023} 进一步采用该框架，并通过增强数据集提升了性能。
+
+近年来，Diffusion Transformer~\parencite{peebles2023} 的出现为图像合成带来了比传统 UNet 扩散模型更具扩展性和灵活性的架构。在此基础上，StableFlow~\parencite{stableflow2024} 和 RF-Solver~\parencite{rfsolver2024} 等工作提出了无需训练的编辑方法，分别通过关键层注入和注意力机制操控来利用DiT的内部结构，尽管 RF-Solver 并不依赖于标准的指令编辑方式。
+
+与此同时，将多模态大语言模型集成到扩散框架中（如 Qwen2VL-Flux~\parencite{qwen2vlflux2025}、Step1X-Edit~\parencite{step1xedit2025} 和 SmartEdit~\parencite{smartedit2024}）使得基于复杂指令的图像编辑更加高效和多样化。另一方面，UltraEdit~\parencite{ultraedit2024} 和 Emu Edit~\parencite{emuedit2024} 仍然采用 UNet 架构，但结合了先进的文本编码器和大规模数据集，实现了更细粒度的指令编辑能力。
+
+
+
+\section{方法}
+本研究采用了与ICEdit~\parencite{zhangInContextEditEnabling2025}相同的框架。该方法基于大规模DiT，通过上下文生成机制实现指令式图像编辑。具体而言，模型输入包括原始图像、编辑指令以及若干对参考编辑样例（即“上下文对”），模型通过学习这些上下文对之间的编辑关系，理解并执行用户给定的新编辑指令，从而生成符合要求的编辑结果。
+
+在训练阶段，模型接收一组（原图、编辑指令、目标图）三元组，通过条件扩散过程学习从原图到目标图的编辑映射。推理时，用户只需提供原图和新的编辑指令，模型即可在无需额外微调的情况下，基于上下文推理能力完成相应的图像编辑任务。
+
+该方法的核心优势在于：
+\begin{itemize}
+    \item \textbf{通用性强}：无需针对每种编辑任务单独训练，具备良好的泛化能力。
+    \item \textbf{高效的上下文理解}：通过上下文示例，模型能够理解复杂、多样的编辑指令。
+    \item \textbf{端到端训练}：整体框架可端到端优化，提升编辑质量和一致性。
+\end{itemize}
+
+因此，我们在本项目中直接采用了该框架，利用其强大的指令理解与图像编辑能力，完成了各类复杂的图像编辑任务。
+
+\section{数据集}
+本工作使用了RSCC数据集。该数据集面向灾害事件，包含大规模的遥感变化描述，专为灾害感知的双时相遥感影像理解设计。通过视觉推理模型QvQ-Max，对62,351对灾前与灾后影像进行了详细的变化描述标注~\parencite{chenRSCC2025}。
+
+\section{评估指标}
+
+本研究采用多种定量和定性评估指标，全面衡量遥感图像生成与编辑的质量与准确性：
+
+\begin{itemize}
+    \item \textbf{CLIP图像相似度}~\parencite{radfordLearningTransferableVisual2021,hesselCLIPScoreReferencefreeEvaluation2021}：利用CLIP模型提取生成图像与目标图像的特征，通过计算特征余弦相似度，评估生成结果与真实目标在高层语义空间中的一致性。
+    \item \textbf{DINO图像相似度}~\parencite{oquabDINOv2LearningRobust2024}：采用DINO自监督视觉Transformer模型提取图像特征，计算生成图像与目标图像的特征相似度，进一步衡量结构和内容的一致性。
+    \item \textbf{CLIP文图相似度}~\parencite{radfordLearningTransferableVisual2021}：将用户编辑指令与生成图像分别输入CLIP模型，计算文本与图像之间的相似度分数，反映生成结果对指令的语义遵循程度。
+    \item \textbf{基于多模态大语言模型的评价指标,如VIEScore}~\parencite{kuVIEScoreExplainableMetrics2024}：引入VIEScore等多模态大语言模型，综合评估图像生成质量和编辑准确性。该类指标能够理解复杂的编辑指令，并对生成图像的语义、内容和编辑效果进行端到端的自动化评价，提升评测的客观性和全面性。
+\end{itemize}
+
+通过上述多维度指标，能够系统地评估模型在遥感灾害图像生成与编辑任务中的表现，确保生成结果在视觉质量、语义一致性和指令遵循性等方面均达到高水平。
+
+
+\section{预期成果}
+
+本项目预计将取得以下几方面的成果：
+
+\begin{itemize}
+    \item \textbf{高质量的遥感灾害图像合成与编辑能力}：基于大规模扩散Transformer和上下文编辑机制，能够根据用户文本指令和灾前影像，生成真实感强、语义一致的灾害遥感图像，满足灾害推演、损失评估和变化检测等多样化需求。
+    \item \textbf{通用且高效的指令式图像编辑框架}：实现无需针对每类编辑任务单独训练的通用编辑范式，显著提升模型在不同灾害类型、不同场景下的泛化能力和适应性。
+    \item \textbf{高效的模型微调与适应策略}：通过参数高效的微调方法，降低新任务适配的计算和数据成本，推动大模型在遥感领域的实际部署和应用。
+    \item \textbf{完善的评测基准与指标体系}：构建面向文本引导遥感图像编辑的评测基准和指标，填补该领域评测体系的空白，为后续相关研究提供标准化参考。
+    \item \textbf{实证性性能提升}：在高分辨率、双时相RSCC灾害影像上，模型在图像质量、编辑准确性和语义一致性等方面均优于现有主流方法，推动遥感灾害图像智能生成与编辑技术的发展。
+\end{itemize}
+
+通过上述成果，项目将为灾害应急管理、科学研究和实际应用提供强有力的数据和技术支撑，促进遥感智能生成与编辑方法在灾害场景下的落地与推广。
+
+
+
+\section{参考文献}
+\printbibliography
+
+\end{document}

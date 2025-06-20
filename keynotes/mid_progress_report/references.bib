@@ -1,0 +1,396 @@
+@inproceedings{khannaDiffusionSatGenerativeFoundation2023,
+  title = {{{DiffusionSat}}: {{A Generative Foundation Model}} for {{Satellite Imagery}}},
+  shorttitle = {{{DiffusionSat}}},
+  booktitle = {The {{Twelfth International Conference}} on {{Learning Representations}}},
+  author = {Khanna, Samar and Liu, Patrick and Zhou, Linqi and Meng, Chenlin and Rombach, Robin and Burke, Marshall and Lobell, David B. and Ermon, Stefano},
+  year = {2024},
+  month = oct,
+  urldate = {2024-06-29},
+  abstract = {Diffusion models have achieved state-of-the-art results on many modalities including images, speech, and video. However, existing models are not tailored to support remote sensing data, which is widely used in important applications including environmental monitoring and crop-yield prediction. Satellite images are significantly different from natural images -- they can be multi-spectral, irregularly sampled across time -- and existing diffusion models trained on images from the Web do not support them. Furthermore, remote sensing data is inherently spatio-temporal, requiring conditional generation tasks not supported by traditional methods based on captions or images. In this paper, we present DiffusionSat, to date the largest generative foundation model trained on a collection of publicly available large, high-resolution remote sensing datasets . As text-based captions are sparsely available for satellite images, we incorporate the associated metadata such as geolocation as conditioning information. Our method produces realistic samples and can be used to solve multiple generative tasks including temporal generation, multi-spectral superrresolution and in-painting. Our method outperforms previous state-of-the-art methods for satellite image generation and is the first large-scale \_generative\_ foundation model for satellite imagery. The project website can be found here: https://samar-khanna.github.io/DiffusionSat/},
+  langid = {english},
+  file = {D:\ZoteroLib\storage\TPBFYHZ3\Khanna et al_2023_DiffusionSat.pdf}
+}
+
+@article{liuText2EarthUnlockingTextdriven2025a,
+  title = {{{Text2Earth}}: {{Unlocking}} Text-Driven Remote Sensing Image Generation with a Global-Scale Dataset and a Foundation Model},
+  shorttitle = {{{Text2Earth}}},
+  author = {Liu, Chenyang and Chen, Keyan and Zhao, Rui and Zou, Zhengxia and Shi, Zhenwei},
+  year = {2025},
+  journal = {IEEE Geoscience and Remote Sensing Magazine},
+  pages = {2--23},
+  issn = {2168-6831},
+  doi = {10.1109/MGRS.2025.3560455},
+  urldate = {2025-05-10},
+  abstract = {Recently, generative foundation models (GFMs) have significantly advanced large-scale text-driven natural image generation and become a prominent research trend across various vertical domains. However, in the remote sensing field, there is still a lack of research on large-scale text-to-image (text2image) generation technology. Existing remote sensing image-text datasets are small in scale and confined to specific geographic areas and scene types. Besides, existing text2image methods have struggled to achieve global-scale, multiresolution controllability, and unbounded image generation. To address these challenges, this article presents two key contributions: the Git-10M dataset and the Text2Earth foundation model. Git-10M is a global-scale image-text dataset consisting of 10.5 million image-text pairs, five times larger than the previous largest one. The dataset covers a wide range of geographic scenes and contains essential geospatial metadata, significantly surpassing existing datasets in both size and diversity. Building on Git-10M, we propose Text2Earth, a 1.3 billion-parameter GFM based on the diffusion framework to model global-scale remote sensing scenes. Text2Earth integrates a resolution guidance mechanism, enabling users to specify image resolutions. A dynamic condition adaptation (DCA) strategy is proposed for training and inference to improve image generation quality. Text2Earth not only excels in zero-shot text2image generation but also demonstrates robust generalization and flexibility across multiple tasks, including unbounded scene construction, image editing, and cross-modal image generation. This robust capability surpasses previous models restricted to basic fixed sizes and limited scene types. On the previous text2image benchmark dataset, Text2Earth outperforms previous models, with a significantly improved +26.23 Fr{\'e}chet inception distance (FID) score and +20.95\% zero-shot classification overall accuracy (Cls-OA) metric. Our project page is https://chen-yang-liu.github.io/Text2Earth/.},
+  keywords = {Diffusion models,Foundation models,Image resolution,Image synthesis,Metadata,Noise reduction,Remote sensing,Spatial resolution,Training,Visualization},
+  file = {D:\ZoteroLib\storage\CV9HYHCJ\Liu et al. - 2025 - Text2Earth Unlocking text-driven remote sensing image generation with a global-scale dataset and a.pdf}
+}
+
+@inproceedings{ouMethodEfficientSynthesizing2023,
+  title = {A {{Method}} of {{Efficient Synthesizing Post-disaster Remote Sensing Image}} with {{Diffusion Model}} and {{LLM}}},
+  booktitle = {2023 {{Asia Pacific Signal}} and {{Information Processing Association Annual Summit}} and {{Conference}} ({{APSIPA ASC}})},
+  author = {Ou, Ruizhe and Yan, Haotian and Wu, Ming and Zhang, Chuang},
+  year = {2023},
+  month = oct,
+  pages = {1549--1555},
+  issn = {2640-0103},
+  doi = {10.1109/APSIPAASC58517.2023.10317383},
+  urldate = {2024-08-21},
+  abstract = {Due to the fact that current deep learning models are typically driven by big data, existing interpretation models for emergency management lack relevant learning data. However, existing pre-trained image generative models cannot directly generate post-disaster remote sensing images without fine-tuning. In this paper, we demonstrate the ability of natural language guidance synthesizing remote sensing imagery affected by disaster by pre-trained image generative model fine-tuned with very few unlabelled images (i.e., less than 100 fine-tuning images) at very low training cost (i.e., one 2080Ti GPU). To trade for lower cost, we embrace the trend of large model, leveraging a pre-trained caption model, GPT-4 and a pre-trained text-to-image Stable Diffusion model for this task. The Stable Diffusion Model, fine-tuned with our method, successfully synthesizes remote sensing images affected by disasters using natural language guidance in both image inpainting and image generation tasks. In addition, the ground truth for other interpretation models learning. With this achievement, our method can synthesize a large amount of data for the emergency management interpretation model to learn when there is less existing data, only unlabelled data and less time, so as to achieve better interpretation performance. Furthermore, our approach highlights the significant of combining human feedback with large models in synthesizing data which is out of the prior knowledge of large model, especially when there is less data available and less computational power available.},
+  keywords = {Computational modeling,Costs,Emergency services,Image synthesis,Natural languages,Semantics,Training},
+  file = {D\:\\ZoteroLib\\storage\\ZRULBCNR\\Ou et al. - 2023 - A Method of Efficient Synthesizing Post-disaster Remote Sensing Image with Diffusion Model and LLM.pdf;D\:\\ZoteroLib\\storage\\MDF8TRJJ\\10317383.html}
+}
+
+@article{tangCRSDiffControllableRemote2024,
+  title = {{{CRS-Diff}}: {{Controllable Remote Sensing Image Generation With Diffusion Model}}},
+  shorttitle = {{{CRS-Diff}}},
+  author = {Tang, Datao and Cao, Xiangyong and Hou, Xingsong and Jiang, Zhongyuan and Liu, Junmin and Meng, Deyu},
+  year = {2024},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  volume = {62},
+  pages = {1--14},
+  issn = {1558-0644},
+  doi = {10.1109/TGRS.2024.3453414},
+  urldate = {2025-04-29},
+  abstract = {The emergence of generative models has revolutionized the field of remote sensing (RS) image generation. Despite generating high-quality images, existing methods are limited in relying mainly on text control conditions, and thus do not always generate images accurately and stably. In this article, we propose CRS-Diff, a new RS generative framework specifically tailored for RS image generation, leveraging the inherent advantages of diffusion models while integrating more advanced control mechanisms. Specifically, CRS-Diff can simultaneously support text-condition, metadata-condition, and image-condition control inputs, thus enabling more precise control to refine the generation process. To effectively integrate multiple condition control information, we introduce a new conditional control mechanism to achieve multiscale feature fusion (FF), thus enhancing the guiding effect of control conditions. To the best of our knowledge, CRS-Diff is the first multiple-condition controllable RS generative model. Experimental results in single-condition and multiple-condition cases have demonstrated the superior ability of our CRS-Diff to generate RS images both quantitatively and qualitatively compared with previous methods. Additionally, our CRS-Diff can serve as a data engine that generates high-quality training data for downstream tasks, e.g., road extraction. The code is available at https://github.com/Sonettoo/CRS-Diff.},
+  keywords = {Controllable generation,deep learning,diffusion model,Diffusion models,Image resolution,Image synthesis,Remote sensing,remote sensing (RS) image,Task analysis,Text to image,Training},
+  file = {D:\ZoteroLib\storage\74LJR9SS\Tang et al. - 2024 - CRS-Diff Controllable Remote Sensing Image Generation With Diffusion Model.pdf}
+}
+
+@inproceedings{tokerSatSynthAugmentingImageMask2024,
+  title = {{{SatSynth}}: {{Augmenting Image-Mask Pairs}} through {{Diffusion Models}} for {{Aerial Semantic Segmentation}}},
+  shorttitle = {{{SatSynth}}},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}}},
+  author = {Toker, Aysim and Eisenberger, Marvin and Cremers, Daniel and {Leal-Taix{\'e}}, Laura},
+  year = {2024},
+  pages = {27695--27705},
+  urldate = {2024-11-21},
+  file = {D\:\\ZoteroLib\\storage\\LTNUQYNE\\Toker_SatSynth_Augmenting_Image-Mask_CVPR_2024_supplemental.pdf;D\:\\ZoteroLib\\storage\\Z83J4BG2\\Toker et al. - 2024 - SatSynth Augmenting Image-Mask Pairs through Diffusion Models for Aerial Semantic Segmentation.pdf}
+}
+
+@misc{yuMetaEarthGenerativeFoundation2024,
+  title = {{{MetaEarth}}: {{A Generative Foundation Model}} for {{Global-Scale Remote Sensing Image Generation}}},
+  shorttitle = {{{MetaEarth}}},
+  author = {Yu, Zhiping and Liu, Chenyang and Liu, Liqin and Shi, Zhenwei and Zou, Zhengxia},
+  year = {2024},
+  month = may,
+  number = {arXiv:2405.13570},
+  eprint = {2405.13570},
+  primaryclass = {cs},
+  doi = {10.48550/arXiv.2405.13570},
+  urldate = {2024-06-05},
+  abstract = {The recent advancement of generative foundational models has ushered in a new era of image generation in the realm of natural images, revolutionizing art design, entertainment, environment simulation, and beyond. Despite producing high-quality samples, existing methods are constrained to generating images of scenes at a limited scale. In this paper, we present MetaEarth, a generative foundation model that breaks the barrier by scaling image generation to a global level, exploring the creation of worldwide, multi-resolution, unbounded, and virtually limitless remote sensing images. In MetaEarth, we propose a resolution-guided self-cascading generative framework, which enables the generating of images at any region with a wide range of geographical resolutions. To achieve unbounded and arbitrary-sized image generation, we design a novel noise sampling strategy for denoising diffusion models by analyzing the generation conditions and initial noise. To train MetaEarth, we construct a large dataset comprising multi-resolution optical remote sensing images with geographical information. Experiments have demonstrated the powerful capabilities of our method in generating global-scale images. Additionally, the MetaEarth serves as a data engine that can provide high-quality and rich training data for downstream tasks. Our model opens up new possibilities for constructing generative world models by simulating Earth visuals from an innovative overhead perspective.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Diffusion Model},
+  file = {D:\ZoteroLib\storage\S96MPHT9\Yu et al. - 2024 - MetaEarth A Generative Foundation Model for Global-Scale Remote Sensing Image Generation.pdf}
+}
+
+@inproceedings{zhaoLabelFreedomStable2023,
+  title = {Label {{Freedom}}: {{Stable Diffusion}} for {{Remote Sensing Image Semantic Segmentation Data Generation}}},
+  shorttitle = {Label {{Freedom}}},
+  booktitle = {2023 {{IEEE International Conference}} on {{Big Data}} ({{BigData}})},
+  author = {Zhao, Chenbo and Ogawa, Yoshiki and Chen, Shenglong and Yang, Zhehui and Sekimoto, Yoshihide},
+  year = {2023},
+  month = dec,
+  pages = {1022--1030},
+  doi = {10.1109/BigData59044.2023.10386381},
+  urldate = {2024-08-01},
+  abstract = {Remote sensing image semantic segmentation of land use, benefitted from the development of deep learning and consequently made considerable progress in terms of inferencing accuracy and speed. However, the effective training of semantic segmentation models for remote sensing imagery necessitates extensively detailed pixel-level annotations, and gathering such data is both time-intensive and laborious. Thus, this study implemented low-rank adaptation on a stable diffusion algorithm to learn the distribution of the pixel-level annotations in case of the LoveDA dataset. Consequently, the annotation-image pairs were used to train the remote sensing image generator based on stable diffusion guided by ControlNet. We proposed a stable diffusion based approach, which can generate image-annotation pairs from scratch. The generated annotation and image pairs achieved a high accuracy of 0.520 mean intersection-over-union on LoveDA dataset, which is close to the original data training result of 0.539 mIoU. Furthermore, the mixed training using generated and original data achieved 0.542 mIoU, thereby demonstrating the data augmentation function of our approach. This study provided a solution for the high-cost pixel-level annotation issue, and thus, exhibited the potential of artificial intelligence generated content.},
+  keywords = {Annotations,ControlNet,Image sensors,low-rank adaption,Measurement,Phase noise,remote sensing image,Satellites,semantic segmentation,Semantic segmentation,stable diffusion,Training},
+  file = {D\:\\ZoteroLib\\storage\\KA5CAUFX\\Zhao et al_2023_Label Freedom.pdf;D\:\\ZoteroLib\\storage\\A73ITPVD\\10386381.html}
+}
+
+@article{zhengChangen2MultiTemporalRemote2024,
+  title = {Changen2: {{Multi-Temporal Remote Sensing Generative Change Foundation Model}}},
+  shorttitle = {Changen2},
+  author = {Zheng, Zhuo and Ermon, Stefano and Kim, Dongjun and Zhang, Liangpei and Zhong, Yanfei},
+  year = {2024},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  pages = {1--17},
+  issn = {1939-3539},
+  doi = {10.1109/TPAMI.2024.3475824},
+  urldate = {2024-11-23},
+  abstract = {Our understanding of the temporal dynamics of the Earth's surface has been significantly advanced by deep vision models, which often require a massive amount of labeled multi-temporal images for training. However, collecting, preprocessing, and annotating multi-temporal remote sensing images at scale is non-trivial since it is expensive and knowledge-intensive. In this paper, we present scalable multi-temporal change data generators based on generative models, which are cheap and automatic, alleviating these data problems. Our main idea is to simulate a stochastic change process over time. We describe the stochastic change process as a probabilistic graphical model, namely the generative probabilistic change model (GPCM), which factorizes the complex simulation problem into two more tractable sub-problems, i.e., condition-level change event simulation and image-level semantic change synthesis. To solve these two problems, we present Changen2, a GPCM implemented with a resolution-scalable diffusion transformer which can generate time series of remote sensing images and corresponding semantic and change labels from labeled and even unlabeled single-temporal images. Changen2 is a ``generative change foundation model'' that can be trained at scale via self-supervision, and is capable of producing change supervisory signals from unlabeled single-temporal images. Unlike existing ``foundation models'', our generative change foundation model synthesizes change data to train task-specific foundation models for change detection. The resulting model possesses inherent zero-shot change detection capabilities and excellent transferability. Comprehensive experiments suggest Changen2 has superior spatiotemporal scalability in data generation, e.g., Changen2 model trained on 256\textsuperscript{2} pixel single-temporal images can yield time series of any length and resolutions of 1,024\textsuperscript{2} pixels. Changen2 pre-trained models exhibit superior zero-shot performance (narrowing the performance gap to 3\% on LEVIR-CD and approximately 10\% on both S2Looking and SECOND, compared to fully supervised counterpart) and transferability across multiple types of change tasks, including ordinary and off-nadir building change, land-use/land-cover change, and disaster assessment. The model and datasets are available at https://github.com/Z-Zheng/pytorch-change-models.},
+  keywords = {Buildings,Change data synthesis,Computational modeling,Data models,Earth,foundation model,generative model,remote sensing,Remote sensing,Semantics,Stochastic processes,Synthetic data,synthetic data pre-training,Three-dimensional displays,Time series analysis},
+  file = {D\:\\ZoteroLib\\storage\\RHFP7FJZ\\Zheng et al. - 2024 - Changen2 Multi-Temporal Remote Sensing Generative Change Foundation Model.pdf;D\:\\ZoteroLib\\storage\\UH6PMPB4\\Changen2_Multi-Temporal_Remote_Sensing_Generative_Change_Foundation_Model.pdf}
+}
+
+@inproceedings{zhengScalableMultiTemporalRemote2023a,
+  title = {Scalable {{Multi-Temporal Remote Sensing Change Data Generation}} via {{Simulating Stochastic Change Process}}},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF International Conference}} on {{Computer Vision}}},
+  author = {Zheng, Zhuo and Tian, Shiqi and Ma, Ailong and Zhang, Liangpei and Zhong, Yanfei},
+  year = {2023},
+  pages = {21818--21827},
+  urldate = {2024-11-23},
+  file = {D\:\\ZoteroLib\\storage\\8BMFWXES\\Zheng et al. - 2023 - Scalable Multi-Temporal Remote Sensing Change Data Generation via Simulating Stochastic Change Process.pdf;D\:\\ZoteroLib\\storage\\R65HM5HC\\Zheng_Scalable_Multi-Temporal_Remote_ICCV_2023_supplemental.pdf}
+}
+@inproceedings{stableflow2024,
+  title={Stable Flow: Vital Layers for Training-Free Image Editing},
+  url={http://arxiv.org/abs/2411.14430},
+  DOI={10.48550/arXiv.2411.14430},
+  abstractNote={Diffusion models have revolutionized ... [truncated for brevity] ... across multiple applications. The project page is available at https://omriavrahami.com/stable-flow},
+  number={arXiv:2411.14430},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  author={Avrahami, Omri and Patashnik, Or and Fried, Ohad and Nemchinov, Egor and Aberman, Kfir and Lischinski, Dani and Cohen-Or, Daniel},
+  year={2025},
+  month=nov
+}
+
+@inproceedings{instructpix2pix2023,
+  title={InstructPix2Pix: Learning To Follow Image Editing Instructions},
+  url={https://openaccess.thecvf.com/content/CVPR2023/html/Brooks_InstructPix2Pix_Learning_To_Follow_Image_Editing_Instructions_CVPR_2023_paper.html},
+  author={Brooks, Tim and Holynski, Aleksander and Efros, Alexei A.},
+  booktitle= {Proceedings of the Computer Vision and Pattern Recognition Conference},
+  year={2023},
+  pages={18392–18402},
+  language={en}
+}
+
+@article{ace2024,
+  title={ACE: All-round Creator and Editor Following Instructions via Diffusion Transformer},
+  url={http://arxiv.org/abs/2410.00086},
+  DOI={10.48550/arXiv.2410.00086},
+  abstractNote={Diffusion models have emerged as ...},
+  note={arXiv:2410.00086 [cs]},
+  number={arXiv:2410.00086},
+  publisher={arXiv},
+  author={Han, Zhen and Jiang, Zeyinzi and Pan, Yulin and Zhang, Jingfeng and Mao, Chaojie and Xie, Chenwei and Liu, Yu and Zhou, Jingren},
+  year={2024},
+  month=nov
+}
+
+@inproceedings{smartedit2024,
+  title={SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models},
+  url={https://openaccess.thecvf.com/content/CVPR2024/html/Huang_SmartEdit_Exploring_Complex_Instruction-based_Image_Editing_with_Multimodal_Large_Language_CVPR_2024_paper.html},
+  author={Huang, Yuzhou and Xie, Liangbin and Wang, Xintao and Yuan, Ziyang and Cun, Xiaodong and Ge, Yixiao and Zhou, Jiantao and Dong, Chao and Huang, Rui and Zhang, Ruimao and Shan, Ying},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  year={2024},
+  pages={8362–8371},
+  language={en}
+}
+
+@article{step1xedit2025,
+  title={Step1X-Edit: A Practical Framework for General Image Editing},
+  url={http://arxiv.org/abs/2504.17761},
+  DOI={10.48550/arXiv.2504.17761},
+  abstractNote={In recent years, image editing models ...},
+  note={arXiv:2504.17761 [cs]},
+  number={arXiv:2504.17761},
+  publisher={arXiv},
+  author={Liu, Shiyu and Han, Yucheng and Xing, Peng and Yin, Fukun and Wang, Rui and Cheng, Wei and Liao, Jiaqi and Wang, Yingming and Fu, Honghao and Han, Chunrui and Li, Guopeng and Peng, Yuang and Sun, Quan and Wu, Jingwei and Cai, Yan and Ge, Zheng and Ming, Ranchen and Xia, Lei and Zeng, Xianfang and Zhu, Yibo and Jiao, Binxing and Zhang, Xiangyu and Yu, Gang and Jiang, Daxin},
+  year={2025},
+  month=may
+}
+
+@article{aceplus2025,
+  title={ACE++: Instruction-Based Image Creation and Editing via Context-Aware Content Filling},
+  url={http://arxiv.org/abs/2501.02487},
+  DOI={10.48550/arXiv.2501.02487},
+  abstractNote={We report ACE++, an instruction-based diffusion framework ...},
+  note={arXiv:2501.02487 [cs]},
+  number={arXiv:2501.02487},
+  publisher={arXiv},
+  author={Mao, Chaojie and Zhang, Jingfeng and Pan, Yulin and Jiang, Zeyinzi and Han, Zhen and Liu, Yu and Zhou, Jingren},
+  year={2025},
+  month=jan
+}
+
+@inproceedings{emuedit2024,
+  title={Emu Edit: Precise Image Editing via Recognition and Generation Tasks},
+  url={https://openaccess.thecvf.com/content/CVPR2024/html/Sheynin_Emu_Edit_Precise_Image_Editing_via_Recognition_and_Generation_Tasks_CVPR_2024_paper.html},
+  author={Sheynin, Shelly and Polyak, Adam and Singer, Uriel and Kirstain, Yuval and Zohar, Amit and Ashual, Oron and Parikh, Devi and Taigman, Yaniv},
+  year={2024},
+  pages={8871–8879}
+}
+
+@misc{flux2024,
+  author       = {{Black Forest Labs}},
+  title        = {{FLUX.1‑dev}: Text-to-image model},
+  howpublished = {GitHub, \url{https://github.com/black-forest-labs/flux}},
+  year         = {2024},
+  note         = {Open‑weight “dev” model; non-commercial use}
+}
+
+@misc{fluxKontext2025,
+  author       = {{Black Forest Labs}},
+  title        = {{FLUX.1 Kontext}: in-context image generation model},
+  howpublished = {Online, \url{https://bfl.ai/models/flux-kontext}},
+  year         = {2025},
+  month        = may,
+  day          = 29,
+  note         = {Released May 29, 2025; tech report available}
+}
+
+
+@misc{qwen2vlflux2025,
+  type={Python},
+  title={erwold/qwen2vl-flux},
+  rights={MIT},
+  url={https://github.com/erwold/qwen2vl-flux},
+  author={StableKirito},
+  year={2025},
+  month=may
+}
+
+@article{rfsolver2024,
+  title={Taming Rectified Flow for Inversion and Editing},
+  url={http://arxiv.org/abs/2411.04746},
+  DOI={10.48550/arXiv.2411.04746},
+  abstractNote={Rectified-flow-based diffusion transformers ...},
+  note={arXiv:2411.04746},
+  number={arXiv:2411.04746},
+  publisher={arXiv},
+  author={Wang, Jiangshan and Pu, Junfu and Qi, Zhongang and Guo, Jiayi and Ma, Yue and Huang, Nisha and Chen, Yuxin and Li, Xiu and Shan, Ying},
+  year={2024},
+  month=nov
+}
+
+@inproceedings{magicbrush2023,
+  title={MagicBrush: A Manually Annotated Dataset for Instruction-Guided Image Editing},
+  volume={36},
+  url={https://papers.nips.cc/paper_files/paper/2023/hash/64008fa30cba9b4d1ab1bd3bd3d57d61-Abstract-Datasets_and_Benchmarks.html},
+  booktitle={Advances in Neural Information Processing Systems},
+  author={Zhang, Kai and Mo, Lingbo and Chen, Wenhu and Sun, Huan and Su, Yu},
+  year={2023},
+  month=dec,
+  pages={31428–31449},
+  language={en}
+}
+
+@inproceedings{controlnet2023,
+  title={Adding Conditional Control to Text-to-Image Diffusion Models},
+  ISSN={2380-7504},
+  url={https://ieeexplore.ieee.org/document/10377881},
+  DOI={10.1109/ICCV51070.2023.00355},
+  abstractNote={We present ControlNet ...},
+  booktitle={2023 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  author={Zhang, Lvmin and Rao, Anyi and Agrawala, Maneesh},
+  year={2023},
+  month=oct,
+  pages={3813–3824}
+}
+
+@article{incontextedit2025,
+  title={In-Context Edit: Enabling Instructional Image Editing with In-Context Generation in Large Scale Diffusion Transformer},
+  url={http://arxiv.org/abs/2504.20690},
+  DOI={10.48550/arXiv.2504.20690},
+  abstractNote={Instruction-based image editing enables robust image modification ...},
+  note={arXiv:2504.20690 [cs]},
+  number={arXiv:2504.20690},
+  publisher={arXiv},
+  author={Zhang, Zechuan and Xie, Ji and Lu, Yu and Yang, Zongxin and Yang, Yi},
+  year={2025},
+  month=apr
+}
+
+@inproceedings{ultraedit2024,
+  title={UltraEdit: Instruction-based Fine-Grained Image Editing at Scale},
+  url={https://openreview.net/forum?id=9ZDdlgH6O8#discussion},
+  abstractNote={This paper presents UltraEdit ...},
+  booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  author={Zhao, Haozhe and Ma, Xiaojian and Chen, Liang and Si, Shuzheng and Wu, Rujie and An, Kaikai and Yu, Peiyu and Zhang, Minjia and Li, Qing and Chang, Baobao},
+  year={2024},
+  month=nov,
+  language={en}
+}
+
+@inproceedings{peebles2023,
+  title={Scalable Diffusion Models with Transformers},
+  url={https://openaccess.thecvf.com/content/ICCV2023/html/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.html},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  author={Peebles, William and Xie, Saining},
+  year={2023},
+  pages={4195--4205},
+  language={en}
+}
+@online{chenRSCC2025,
+  title = {{{RSCC}}: {{A Large-Scale Remote Sensing Change Caption Dataset}} for {{Disaster Events}}},
+  author = {Chen, Zhenyuan and Wang, Chenxi and Zhang, Ningyu and Zhang, Feng},
+  date = {2025},
+  pubstate = {prepublished},
+  file = {D:\ZoteroLib\storage\CU53RM42\280_RSCC_0516v2_single_blind.pdf}
+}
+
+@online{zhangInContextEditEnabling2025,
+  title = {In-{{Context Edit}}: {{Enabling Instructional Image Editing}} with {{In-Context Generation}} in {{Large Scale Diffusion Transformer}}},
+  shorttitle = {In-{{Context Edit}}},
+  author = {Zhang, Zechuan and Xie, Ji and Lu, Yu and Yang, Zongxin and Yang, Yi},
+  date = {2025-04-29},
+  eprint = {2504.20690},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2504.20690},
+  url = {http://arxiv.org/abs/2504.20690},
+  urldate = {2025-05-02},
+  abstract = {Instruction-based image editing enables robust image modification via natural language prompts, yet current methods face a precision-efficiency tradeoff. Fine-tuning methods demand significant computational resources and large datasets, while training-free techniques struggle with instruction comprehension and edit quality. We resolve this dilemma by leveraging large-scale Diffusion Transformer (DiT)' enhanced generation capacity and native contextual awareness. Our solution introduces three contributions: (1) an in-context editing framework for zero-shot instruction compliance using in-context prompting, avoiding structural changes; (2) a LoRA-MoE hybrid tuning strategy that enhances flexibility with efficient adaptation and dynamic expert routing, without extensive retraining; and (3) an early filter inference-time scaling method using vision-language models (VLMs) to select better initial noise early, improving edit quality. Extensive evaluations demonstrate our method's superiority: it outperforms state-of-the-art approaches while requiring only 0.5\% training data and 1\% trainable parameters compared to conventional baselines. This work establishes a new paradigm that enables high-precision yet efficient instruction-guided editing. Codes and demos can be found in https://river-zhang.github.io/ICEdit-gh-pages/.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {D\:\\ZoteroLib\\storage\\XFQ2TXS9\\Zhang et al. - 2025 - In-Context Edit Enabling Instructional Image Editing with In-Context Generation in Large Scale Diff.pdf;D\:\\ZoteroLib\\storage\\BJF945V9\\2504.html}
+}
+
+@inproceedings{hesselCLIPScoreReferencefreeEvaluation2021,
+  title = {{{CLIPScore}}: {{A Reference-free Evaluation Metric}} for {{Image Captioning}}},
+  shorttitle = {{{CLIPScore}}},
+  booktitle = {Proceedings of the 2021 {{Conference}} on {{Empirical Methods}} in {{Natural Language Processing}}},
+  author = {Hessel, Jack and Holtzman, Ari and Forbes, Maxwell and Le Bras, Ronan and Choi, Yejin},
+  editor = {Moens, Marie-Francine and Huang, Xuanjing and Specia, Lucia and Yih, Scott Wen-tau},
+  date = {2021-11},
+  pages = {7514--7528},
+  publisher = {Association for Computational Linguistics},
+  location = {Online and Punta Cana, Dominican Republic},
+  doi = {10.18653/v1/2021.emnlp-main.595},
+  url = {https://aclanthology.org/2021.emnlp-main.595},
+  urldate = {2024-07-18},
+  abstract = {Image captioning has conventionally relied on reference-based automatic evaluations, where machine captions are compared against captions written by humans. This is in contrast to the reference-free manner in which humans assess caption quality. In this paper, we report the surprising empirical finding that CLIP (Radford et al., 2021), a cross-modal model pretrained on 400M image+caption pairs from the web, can be used for robust automatic evaluation of image captioning without the need for references. Experiments spanning several corpora demonstrate that our new reference-free metric, CLIPScore, achieves the highest correlation with human judgements, outperforming existing reference-based metrics like CIDEr and SPICE. Information gain experiments demonstrate that CLIPScore, with its tight focus on image-text compatibility, is complementary to existing reference-based metrics that emphasize text-text similarities. Thus, we also present a reference-augmented version, RefCLIPScore, which achieves even higher correlation. Beyond literal description tasks, several case studies reveal domains where CLIPScore performs well (clip-art images, alt-text rating), but also where it is relatively weaker in comparison to reference-based metrics, e.g., news captions that require richer contextual knowledge.},
+  eventtitle = {{{EMNLP}} 2021},
+  file = {D:\ZoteroLib\storage\YY8G4G47\Hessel et al_2021_CLIPScore.pdf}
+}
+
+@inproceedings{kuVIEScoreExplainableMetrics2024,
+  title = {{{VIEScore}}: {{Towards Explainable Metrics}} for {{Conditional Image Synthesis Evaluation}}},
+  shorttitle = {{{VIEScore}}},
+  booktitle = {Proceedings of the 62nd {{Annual Meeting}} of the {{Association}} for {{Computational Linguistics}} ({{Volume}} 1: {{Long Papers}})},
+  author = {Ku, Max and Jiang, Dongfu and Wei, Cong and Yue, Xiang and Chen, Wenhu},
+  editor = {Ku, Lun-Wei and Martins, Andre and Srikumar, Vivek},
+  date = {2024-08},
+  pages = {12268--12290},
+  publisher = {Association for Computational Linguistics},
+  location = {Bangkok, Thailand},
+  doi = {10.18653/v1/2024.acl-long.663},
+  url = {https://aclanthology.org/2024.acl-long.663/},
+  urldate = {2025-05-06},
+  abstract = {In the rapidly advancing field of conditional image generation research, challenges such as limited explainability lie in effectively evaluating the performance and capabilities of various models. This paper introduces VIEScore, a Visual Instruction-guided Explainable metric for evaluating any conditional image generation tasks. VIEScore leverages general knowledge from Multimodal Large Language Models (MLLMs) as the backbone and does not require training or fine-tuning. We evaluate VIEScore on seven prominent tasks in conditional image tasks and found: (1) VIEScore (GPT4-o) achieves a high Spearman correlation of 0.4 with human evaluations, while the human-to-human correlation is 0.45. (2) VIEScore (with open-source MLLM) is significantly weaker than GPT-4o and GPT-4v in evaluating synthetic images. (3) VIEScore achieves a correlation on par with human ratings in the generation tasks but struggles in editing tasks. With these results, we believe VIEScore shows its great potential to replace human judges in evaluating image synthesis tasks.},
+  eventtitle = {{{ACL}} 2024},
+  file = {D:\ZoteroLib\storage\4W3WWMMG\Ku et al. - 2024 - VIEScore Towards Explainable Metrics for Conditional Image Synthesis Evaluation.pdf}
+}
+
+@article{oquabDINOv2LearningRobust2024,
+  title = {{{DINOv2}}: {{Learning Robust Visual Features}} without {{Supervision}}},
+  shorttitle = {{{DINOv2}}},
+  author = {Oquab, Maxime and Darcet, Timothée and Moutakanni, Théo and Vo, Huy V. and Szafraniec, Marc and Khalidov, Vasil and Fernandez, Pierre and HAZIZA, Daniel and Massa, Francisco and El-Nouby, Alaaeldin},
+  date = {2024},
+  journaltitle = {Transactions on Machine Learning Research},
+  issn = {2835-8856},
+  url = {https://openreview.net/forum?id=a68SUt6zFt},
+  urldate = {2024-07-19},
+  abstract = {The recent breakthroughs in natural language processing for model pretraining on large quantities of data have opened the way for similar foundation models in computer vision. These models could greatly simplify the use of images in any system by producing all-purpose visual features, i.e., features that work across image distributions and tasks without finetuning. This work shows that existing pretraining methods, especially self-supervised methods, can produce such features if trained on enough curated data from diverse sources. We revisit existing approaches and combine different techniques to scale our pretraining in terms of data and model size. Most of the technical contributions aim at accelerating and stabilizing the training at scale. In terms of data, we propose an automatic pipeline to build a dedicated, diverse, and curated image dataset instead of uncurated data, as typically done in the self-supervised literature. In terms of models, we train a ViT model with 1B parameters and distill it into a series of smaller models that surpass the best available all-purpose features, OpenCLIP on most of the benchmarks at image and pixel levels.},
+  annotation = {CCF: A},
+  file = {D:\ZoteroLib\storage\WLXTIWCP\Oquab et al_DINOv2.pdf}
+}
+
+@inproceedings{radfordLearningTransferableVisual2021,
+  title = {Learning {{Transferable Visual Models From Natural Language Supervision}}},
+  booktitle = {Proceedings of the 38th {{International Conference}} on {{Machine Learning}}},
+  author = {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  date = {2021-07-01},
+  pages = {8748--8763},
+  publisher = {PMLR},
+  issn = {2640-3498},
+  url = {https://proceedings.mlr.press/v139/radford21a.html},
+  urldate = {2024-07-07},
+  abstract = {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.},
+  eventtitle = {International {{Conference}} on {{Machine Learning}}},
+  langid = {english},
+  annotation = {CCF: A},
+  file = {D\:\\ZoteroLib\\storage\\HKNJNPGP\\Radford et al. - 2021 - Learning Transferable Visual Models From Natural L.pdf;D\:\\ZoteroLib\\storage\\MRSLVU8U\\Radford et al_2021_Learning Transferable Visual Models From Natural Language Supervision.pdf}
+}

@@ -1,0 +1,12 @@
+\ProvidesFile{keynote.cbx}[2025/06/01 Custom author-title citation style]
+
+\RequireCitationStyle{authoryear}
+
+\DeclareNameAlias{sortname}{last-first}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}
+  {\printnames{labelname}\addcomma\space\printfield{year}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
